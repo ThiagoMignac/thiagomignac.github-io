@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/* variaveis */
+
+:root {
+    --mainColor: #54B689;
+    --mainTextColor: #fff;
+    --borderColor: #999;
+    --bioBgColor: #1e2a3a;
+    --bioBorderColor: #293544;
+    --aboutBgColor: #111821;
+}
+
+.highLight{
+    color: var(--mainColor);
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    color: var(--mainTextColor);   
+}
+
+#bioContainer{
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: var(--bioBgColor);
+    text-align: center;
+    padding: 20px 12px;
+    border-right: 5px solid var(--bioBorderColor);
+}
+
+#aboutContainer{
+    flex: 80%;
+    min-height: 100vh;
+    background-color: var(--aboutBgColor);
+    padding: 50px;
+
+}
+
+/* bio container */
+
+#bioContainer h2{
+    margin-bottom: 25px;
+}
+
+#bioContainer p{
+    margin-bottom: 20px;
+}
+
+#bioImage{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+    border: 2px solid var(--borderColor);
+}
+
+#bioContainer #welcomeText{
+    font-weight: bold;
+}
+
+#socialContainer{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--borderColor);
+
+}
+#socialContainer li
+{
+    flex: 1 1 0;
+    max-width: 60px;
+
+}
+
+#socialContainer li a
+{
+    color: var(--mainColor);
+    font-size: 30px;
+
+}
+
+#mailContainer ion-icon,
+#emailContainer a 
+{
+    flex: 1 1 0;
+}
+
+#emailContainer a 
+{
+    color: var(--mainTextColor);
+    text-decoration: none;
+    max-width: 225px;
+}
+#emailContainer ion-icon{
+    color: var(--mainColor);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20px;
+    margin-bottom: -4px;
+    
+}
+
+/*about container */
+
+#name{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#title{
+    font-size:24px;
+    margin-bottom:15px;
+    font-weight: bold;
+}
+.description {
+    max-width: 75%;
+    margin-bottom:10px
+}
+
+#btnProject
+{
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--mainTextColor);
+    background-color: var(--mainColor);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12px 10px;
+    text-align: center;
+    width: 150px;
+    display: flex;
+}
+
+#btnProject ion-icon
+{
+    font-size: 25px;
+    max-width: 20px;
+}
+
+#btnProject:hover
+{
+    background: transparent;
+    border: 1px solid var(--mainTextColor);
+}
+
+#skillsSelectionTitle
+{
+    border-top: 1px solid var(--borderColor);
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;   
+}
+
+#skillsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skilsBox
+{
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 35px;
+}
+
+.skillsTitle
+{
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--mainColor);
+}
+
+.skilsBox i{
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+
+@media(max-width:840px){
+
+    #container 
+    {
+        flex-direction: column;
+    }
+    #bioContainer {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bioBorderColor);
+    }
+    #bioContainer h2{
+        display: none;
+    }
+    #bioContainer P
+    {
+        max-width: 60%;
+        margin: 10px auto;
+    }
+
+    #aboutContainer{
+        text-align: center;
+        padding: 30px;
+    }
+    #aboutContainer .description{
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #btnProjects{
+        margin: 20px auto;
+    }
+    .skilsBox{
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    .skilsBox i {
+        font-size: 70px;
+    }
+}
